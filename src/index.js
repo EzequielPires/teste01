@@ -53,7 +53,6 @@ app.get('/todos', checksExistsUserAccount, (request, response) => {
 app.post('/todos', checksExistsUserAccount, (request, response) => {
   const {user} = request;
   const {title, deadline} = request.body;
-
   const todo = { 
     id: uuidv4(),
     title: title,
